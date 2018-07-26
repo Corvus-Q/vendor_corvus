@@ -36,6 +36,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/etc/init.local.rc:system/etc/init/dirtyunicorns.rc
 
+# Google permissions
+PRODUCT_COPY_FILES += \
+    vendor/du/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml
+
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
 ifneq ($(filter shamu,$(TARGET_PRODUCT)),)

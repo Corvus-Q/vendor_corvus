@@ -6,7 +6,8 @@ PRODUCT_PACKAGES += \
     Longshot \
     Recorder \
     Gallery2 \
-    Calculator
+    Calculator \
+    DeskClock
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \

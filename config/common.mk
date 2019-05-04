@@ -79,6 +79,10 @@ PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
     vendor/du/prebuilt/common/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
 
+# Livedisplay
+PRODUCT_COPY_FILES += \
+    vendor/du/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
+
 # Packages
 include vendor/du/config/packages.mk
 

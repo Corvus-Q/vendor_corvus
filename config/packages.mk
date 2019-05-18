@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     Recorder \
     Gallery2 \
     Calculator \
-    DeskClock
+    DeskClock \
+    Via
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \

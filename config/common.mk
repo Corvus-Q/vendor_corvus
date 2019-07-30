@@ -36,6 +36,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/etc/init.local.rc:system/etc/init/dirtyunicorns.rc
 
+# Configs
+PRODUCT_COPY_FILES += \
+    vendor/du/prebuilt/common/etc/sysconfig/du-power-whitelist.xml:system/etc/sysconfig/du-power-whitelist.xml \
+    vendor/du/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml \
+    vendor/du/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml \
+    vendor/du/prebuilt/common/etc/permissions/du-privapp-permissions.xml:system/etc/permissions/du-privapp-permissions.xml
+
 # Google permissions
 PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml

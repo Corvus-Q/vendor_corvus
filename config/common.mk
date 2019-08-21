@@ -47,6 +47,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml
 
+# Some permissions
+PRODUCT_COPY_FILES += \
+    vendor/du/config/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/du/config/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
+
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
 ifneq ($(filter shamu,$(TARGET_PRODUCT)),)

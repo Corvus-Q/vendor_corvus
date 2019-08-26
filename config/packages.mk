@@ -4,7 +4,8 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherClient \
     Longshot \
-    Recorder
+    Recorder \
+    Gallery2
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \

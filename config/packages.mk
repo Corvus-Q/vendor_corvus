@@ -1,5 +1,6 @@
 # Packages
 PRODUCT_PACKAGES += \
+    SubstratumSignature \
     CustomDoze \
     WallpaperPicker \
     WeatherClient \

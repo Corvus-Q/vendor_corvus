@@ -1,5 +1,5 @@
 # Versioning System
-DU_BASE_VERSION = EXTRASAFE
+DU_BASE_VERSION = ULTRASAFE
 DU_BUILD_TYPE := DUREX
 
 # Set all versions

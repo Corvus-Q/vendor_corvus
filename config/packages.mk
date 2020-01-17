@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     TouchGestures \
     StitchImage \
     SystemPitchBlackOverlay \
+    SystemUIPitchBlackOverlay \
     SystemDarkGrayOverlay \
     SystemUIDarkGrayOverlay \
     SystemStyleOverlay \

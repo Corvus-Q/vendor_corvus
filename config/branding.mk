@@ -1,6 +1,6 @@
 # Set all versions
 DU_BUILD_TYPE ?= UNOFFICIAL
-DU_VERSION_BASE := 7.5-OMEN
+DU_VERSION_BASE := 8.0-TSUSHIMA
 
 # Set all versions
 BUILD_DATE := $(shell date -u +%d%m%Y)

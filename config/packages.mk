@@ -16,3 +16,6 @@ PRODUCT_PACKAGES += \
 # Integrates package for easier Google Pay fixing
 PRODUCT_PACKAGES += \
     sqlite3
+
+# Plugins
+include packages/apps/PotatoPlugins/plugins.mk

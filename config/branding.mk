@@ -1,5 +1,5 @@
 # Set all versions
-DU_BUILD_TYPE ?= UNOFFICIAL
+DU_BUILD_TYPE ?= Unofficial
 DU_VERSION_BASE := 8.5
 CRVS_CODENAME := Sage
 

@@ -1,7 +1,7 @@
 # Set all versions
 DU_BUILD_TYPE ?= Unofficial
-DU_VERSION_BASE := 8.5
-CRVS_CODENAME := Sage
+DU_VERSION_BASE := 9.0
+CRVS_CODENAME := EndGame
 
 # Set all versions
 BUILD_DATE := $(shell date -u +%d%m%Y)

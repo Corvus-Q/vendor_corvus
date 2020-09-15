@@ -46,7 +46,7 @@ trap cleanup 0
 #
 # $1: device name
 # $2: vendor name
-# $3: DU root directory
+# $3: CORVUS root directory
 # $4: is common device - optional, default to false
 # $5: cleanup - optional, default to true
 # $6: custom vendor makefile name - optional, default to false
@@ -68,14 +68,14 @@ function setup_vendor() {
     fi
 
     export DU_ROOT="$3"
-    if [ ! -d "$DU_ROOT" ]; then
-        echo "\$DU_ROOT must be set and valid before including this script!"
+    if [ ! -d "$CORVUS_ROOT" ]; then
+        echo "\$CORVUS_ROOT must be set and valid before including this script!"
         exit 1
     fi
 
     export OUTDIR=vendor/"$VENDOR"/"$DEVICE"
-    if [ ! -d "$DU_ROOT/$OUTDIR" ]; then
-        mkdir -p "$DU_ROOT/$OUTDIR"
+    if [ ! -d "$CORVUS_ROOT/$OUTDIR" ]; then
+        mkdir -p "$CORVUS_ROOT/$OUTDIR"
     fi
 
     VNDNAME="$6"
@@ -1189,7 +1189,7 @@ function get_file() {
 # Convert apk|jar .odex in the corresposing classes.dex
 #
 function oat2dex() {
-    local DU_TARGET="$1"
+    local CORVUS_TARGET="$1"
     local OEM_TARGET="$2"
     local SRC="$3"
     local TARGET=
@@ -1197,16 +1197,16 @@ function oat2dex() {
     local HOST="$(uname | tr '[:upper:]' '[:lower:]')"
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$DU_ROOT"/prebuilts/tools-extras/common/smali/baksmali.jar
-        export SMALIJAR="$DU_ROOT"/prebuilts/tools-extras/common/smali/smali.jar
+        export BAKSMALIJAR="$CORVUS_ROOT"/prebuilts/tools-extras/common/smali/baksmali.jar
+        export SMALIJAR="$CORVUS_ROOT"/prebuilts/tools-extras/common/smali/smali.jar
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$DU_ROOT"/prebuilts/tools-extras/${HOST}-x86/bin/vdexExtractor
+        export VDEXEXTRACTOR="$CORVUS_ROOT"/prebuilts/tools-extras/${HOST}-x86/bin/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$DU_ROOT"/prebuilts/tools-extras/${HOST}-x86/bin/compact_dex_converter
+        export CDEXCONVERTER="$CORVUS_ROOT"/prebuilts/tools-extras/${HOST}-x86/bin/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder
@@ -1226,11 +1226,11 @@ function oat2dex() {
         FULLY_DEODEXED=1 && return 0 # system is fully deodexed, return
     fi
 
-    if [ ! -f "$DU_TARGET" ]; then
+    if [ ! -f "$CORVUS_TARGET" ]; then
         return;
     fi
 
-    if grep "classes.dex" "$DU_TARGET" >/dev/null; then
+    if grep "classes.dex" "$CORVUS_TARGET" >/dev/null; then
         return 0 # target apk|jar is already odexed, return
     fi
 
@@ -1490,7 +1490,7 @@ function extract() {
                 fi
                 if [ -a "$DUMPDIR"/"$PARTITION".new.dat ]; then
                     echo "Converting "$PARTITION".new.dat to "$PARTITION".img"
-                    python "$DU_ROOT"/vendor/du/build/tools/sdat2img.py "$DUMPDIR"/"$PARTITION".transfer.list "$DUMPDIR"/"$PARTITION".new.dat "$DUMPDIR"/"$PARTITION".img 2>&1
+                    python "$DU_ROOT"/vendor/corvus/build/tools/sdat2img.py "$DUMPDIR"/"$PARTITION".transfer.list "$DUMPDIR"/"$PARTITION".new.dat "$DUMPDIR"/"$PARTITION".img 2>&1
                     rm -rf "$DUMPDIR"/"$PARTITION".new.dat "$DUMPDIR"/"$PARTITION"
                     mkdir "$DUMPDIR"/"$PARTITION" "$DUMPDIR"/tmp
                     echo "Requesting sudo access to mount the "$PARTITION".img"

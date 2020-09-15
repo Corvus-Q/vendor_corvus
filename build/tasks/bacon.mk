@@ -1,4 +1,4 @@
-# Copyright (C) 2017 Unlegacy-Android
+# Copyright (C) 2017 CorvusROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,10 +21,10 @@
 # PFX: Prefix "target C++:" in yellow
 # INS: Module "Install:" output color (cyan for ics)
 ifneq ($(BUILD_WITH_COLORS),0)
-    include $(TOP_DIR)vendor/du/build/core/colors.mk
+    include $(TOP_DIR)vendor/corvus/build/core/colors.mk
 endif
 
-INTERNAL_BACON_TARGET := $(PRODUCT_OUT)/$(DU_VERSION).zip
+INTERNAL_BACON_TARGET := $(PRODUCT_OUT)/$(CORVUS_VERSION).zip
 
 .PHONY: corvus
 corvus: $(INTERNAL_OTA_PACKAGE_TARGET)

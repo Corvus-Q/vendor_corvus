@@ -44,23 +44,23 @@ include vendor/pixelgapps/pixel-gapps.mk
 endif
 
 # Copy all custom init rc files
-$(foreach f,$(wildcard vendor/du/prebuilt/common/etc/init/*.rc),\
+$(foreach f,$(wildcard vendor/corvus/prebuilt/common/etc/init/*.rc),\
     $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
 # Backup tool
 PRODUCT_COPY_FILES += \
-    vendor/du/build/tools/backuptool.sh:install/bin/backuptool.sh \
-    vendor/du/build/tools/backuptool.functions:install/bin/backuptool.functions \
-    vendor/du/build/tools/50-du.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-du.sh
+    vendor/corvus/build/tools/backuptool.sh:install/bin/backuptool.sh \
+    vendor/corvus/build/tools/backuptool.functions:install/bin/backuptool.functions \
+    vendor/corvus/build/tools/50-corvus.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-corvus.sh
 
 # Permission
 PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/etc/permissions/du-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/du-power-whitelist.xml \
-    vendor/du/prebuilt/common/etc/permissions/privapp-permissions-du-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-du-system.xml \
-    vendor/du/prebuilt/common/etc/permissions/privapp-permissions-du-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-du-product.xml \
-    vendor/du/prebuilt/common/etc/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml \
-    vendor/du/prebuilt/common/etc/permissions/privapp-permissions-livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-livedisplay.xml \
-    vendor/du/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-elgoog.xml
+    vendor/corvus/prebuilt/common/etc/permissions/corvus-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/corvus-power-whitelist.xml \
+    vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-corvus-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-corvus-system.xml \
+    vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-corvus-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-corvus-product.xml \
+    vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-livedisplay.xml \
+    vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-elgoog.xml
 
 
 # Disable vendor restrictions
@@ -74,7 +74,6 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Enable ccache
 USE_CCACHE := true
 
-
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.exfat \
@@ -85,19 +84,19 @@ PRODUCT_PACKAGES += \
     mount.ntfs
 
 # Art
-include vendor/du/config/art.mk
+include vendor/corvus/config/art.mk
 
 # Branding
-include vendor/du/config/branding.mk
+include vendor/corvus/config/branding.mk
 
 # Packages
-include vendor/du/config/packages.mk
+include vendor/corvus/config/packages.mk
 
 # Themes
-include vendor/themes/common.mk
+#include vendor/themes/common.mk
 
 # Overlays
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/du/overlay
-DEVICE_PACKAGE_OVERLAYS += vendor/du/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/corvus/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/corvus/overlay/common
 
 $(call inherit-product-if-exists, external/motorola/faceunlock/config.mk)

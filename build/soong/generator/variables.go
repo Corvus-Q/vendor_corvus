@@ -6,12 +6,12 @@ import (
 	"android/soong/android"
 )
 
-func duExpandVariables(ctx android.ModuleContext, in string) string {
-	duVars := ctx.Config().VendorConfig("duVarsPlugin")
+func corvusExpandVariables(ctx android.ModuleContext, in string) string {
+	corvusVars := ctx.Config().VendorConfig("corvusVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
-		if duVars.IsSet(name) {
-			return duVars.String(name), nil
+		if corvusVars.IsSet(name) {
+			return corvusVars.String(name), nil
 		}
 		// This variable is not for us, restore what the original
 		// variable string will have looked like for an Expand

@@ -1,4 +1,4 @@
-function __print_du_functions_help() {
+function __print_corvus_functions_help() {
 cat <<EOF
 Additional Corvus-OS functions:
 - cout:            Changes directory to out.
@@ -80,7 +80,7 @@ function breakfast()
                 variant="userdebug"
             fi
 
-            lunch du_$target-$variant
+            lunch corvus_$target-$variant
         fi
     fi
 
@@ -121,7 +121,7 @@ function eat()
         echo "Waiting for device..."
         adb wait-for-device-recovery
         echo "Found device"
-        if (adb shell getprop ro.du.device | grep -q "$DU_BUILD"); then
+        if (adb shell getprop ro.corvus.device | grep -q "$CORVUS_BUILD"); then
             echo "Rebooting to sideload for install"
             adb reboot sideload-auto-reboot
             adb wait-for-sideload
@@ -347,7 +347,7 @@ function installboot()
     adb wait-for-device-recovery
     adb root
     adb wait-for-device-recovery
-    if (adb shell getprop ro.du.device | grep -q "$DU_BUILD");
+    if (adb shell getprop ro.corvus.device | grep -q "$CORVUS_BUILD");
     then
         adb push $OUT/boot.img /cache/
         adb shell dd if=/cache/boot.img of=$PARTITION
@@ -385,7 +385,7 @@ function installrecovery()
     adb wait-for-device-recovery
     adb root
     adb wait-for-device-recovery
-    if (adb shell getprop ro.du.device | grep -q "$DU_BUILD");
+    if (adb shell getprop ro.corvus.device | grep -q "$CORVUS_BUILD");
     then
         adb push $OUT/recovery.img /cache/
         adb shell dd if=/cache/recovery.img of=$PARTITION
@@ -480,7 +480,7 @@ function dopush()
         echo "Device Found."
     fi
 
-    if (adb shell getprop ro.du.device | grep -q "$DU_BUILD") || [ "$FORCE_PUSH" = "true" ];
+    if (adb shell getprop ro.corvus.device | grep -q "$CORVUS_BUILD") || [ "$FORCE_PUSH" = "true" ];
     then
     # retrieve IP and PORT info if we're using a TCP connection
     TCPIPPORT=$(adb devices \
@@ -612,7 +612,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/du/build/tools/repopick.py $@
+    $T/vendor/corvus/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {

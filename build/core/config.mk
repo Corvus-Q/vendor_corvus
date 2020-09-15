@@ -1,5 +1,5 @@
 
-# Copyright (C) 2018 AOSiP
+# Copyright (C) 2018 CorvusROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,4 +14,4 @@
 # limitations under the License.
 
 # Rules for QCOM targets
-include $(TOPDIR)vendor/du/build/core/qcom_target.mk
+include $(TOPDIR)vendor/corvus/build/core/qcom_target.mk

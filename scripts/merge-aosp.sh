@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # The source directory; this is automatically two folder up because the script
-# is located in vendor/du/scripts. Other ROMs will need to change this. The logic is
+# is located in vendor/corvus/scripts. Other ROMs will need to change this. The logic is
 # as follows:
 # 1. Get the absolute path of the script with readlink in case there is a symlink
 #    This script may be symlinked by a manifest so we need to account for that

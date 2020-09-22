@@ -86,6 +86,9 @@ PRODUCT_PACKAGES += \
 # Art
 include vendor/corvus/config/art.mk
 
+# Boot animation
+include vendor/corvus/config/bootanimation.mk
+
 # Branding
 include vendor/corvus/config/branding.mk
 

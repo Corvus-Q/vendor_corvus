@@ -1,6 +1,6 @@
 # Set all versions
 RAVEN_LAIR ?= Unofficial
-CORVUS_VERSION_BASE := 9.5-R
+CORVUS_VERSION_BASE := 9.5-R-Alpha
 CORVUS_CODENAME := TheStorm
 
 # Set all versions

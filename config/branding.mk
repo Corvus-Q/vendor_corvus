@@ -1,6 +1,6 @@
 # Set all versions
 DU_BUILD_TYPE ?= Unofficial
-DU_VERSION_BASE := 9.0
+DU_VERSION_BASE := 9.5
 CRVS_CODENAME := EndGame
 
 # Set all versions

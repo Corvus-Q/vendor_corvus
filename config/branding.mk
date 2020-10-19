@@ -1,7 +1,7 @@
 # Set all versions
 DU_BUILD_TYPE ?= Unofficial
-DU_VERSION_BASE := 9.5
-CRVS_CODENAME := EndGame
+DU_VERSION_BASE := A10.0
+CRVS_CODENAME := Stable
 
 # Set all versions
 BUILD_DATE := $(shell date -u +%d%m%Y)

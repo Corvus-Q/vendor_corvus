@@ -16,12 +16,12 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.support.colorpicker;
+package com.corvus.support.colorpicker;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.dirtyunicorns.support.preferences.SecureSettingsStore;
+import com.corvus.support.preferences.SecureSettingsStore;
 
 public class ColorPickerSecurePreference extends ColorPickerPreference {
 

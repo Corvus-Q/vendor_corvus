@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.support.preferences;
+package com.corvus.support.preferences;
 
 import android.content.ContentResolver;
 import android.preference.PreferenceDataStore;

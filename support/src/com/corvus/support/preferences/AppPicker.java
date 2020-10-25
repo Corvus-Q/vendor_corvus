@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.dirtyunicorns.support.preferences;
+package com.corvus.support.preferences;
 
 import android.app.ListActivity;
 import android.content.Context;
@@ -38,7 +38,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.dirtyunicorns.support.R;
+import com.corvus.support.R;
 
 public class AppPicker extends ListActivity {
 

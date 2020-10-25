@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.support.preferences;
+package com.corvus.support.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
 import androidx.preference.SwitchPreference;
 
-import com.dirtyunicorns.support.R;
+import com.corvus.support.R;
 
 public class CustomSwitchPreference extends SwitchPreference {
 

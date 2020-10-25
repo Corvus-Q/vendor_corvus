@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.support.preferences;
+package com.corvus.support.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.dirtyunicorns.support.preferences.SecureSettingsStore;
+import com.corvus.support.preferences.SecureSettingsStore;
 
 public class SecureSettingMasterSwitchPreference extends MasterSwitchPreference {
 

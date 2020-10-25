@@ -1,4 +1,4 @@
-package com.dirtyunicorns.support.helpers;
+package com.corvus.support.helpers;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import com.dirtyunicorns.support.R;
+import com.corvus.support.R;
 
 public final class RowLayout extends ViewGroup {
     private static final int DEFAULT_HORIZONTAL_SPACING = 5;

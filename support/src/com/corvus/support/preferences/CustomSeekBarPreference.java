@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.dirtyunicorns.support.preferences;
+package com.corvus.support.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -31,7 +31,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dirtyunicorns.support.R;
+import com.corvus.support.R;
 
 public class CustomSeekBarPreference extends Preference implements SeekBar.OnSeekBarChangeListener,
         View.OnClickListener, View.OnLongClickListener {

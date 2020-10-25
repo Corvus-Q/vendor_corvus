@@ -1,4 +1,4 @@
-package com.dirtyunicorns.support.helpers;
+package com.corvus.support.helpers;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,7 +15,7 @@ import android.graphics.drawable.Drawable;
 import androidx.appcompat.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
-import com.dirtyunicorns.support.R;
+import com.corvus.support.R;
 
 public class CircularImageView extends AppCompatImageView {
 

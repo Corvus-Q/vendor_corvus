@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.support.colorpicker;
+package com.corvus.support.colorpicker;
 
 import android.app.AlertDialog;
 import android.app.NotificationManager;
@@ -30,7 +30,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import com.dirtyunicorns.support.R;
+import com.corvus.support.R;
 
 public class ColorPickerDialog extends AlertDialog implements ColorPickerView.OnColorChangedListener, View.OnClickListener {
 

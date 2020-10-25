@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.support.preferences;
+package com.corvus.support.preferences;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -42,7 +42,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.dirtyunicorns.support.R;
+import com.corvus.support.R;
 
 public class IconPackPreference extends Preference {
 

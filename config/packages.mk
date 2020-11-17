@@ -10,7 +10,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     TouchGestures \
     StitchImage \
-    Recorder
+    Recorder \
+    Seedvault
 
 # Allows registering device to Google easier for gapps
 # Integrates package for easier Google Pay fixing

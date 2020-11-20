@@ -1,6 +1,6 @@
 # Set all versions
 DU_BUILD_TYPE ?= Unofficial
-DU_VERSION_BASE := A10.0
+DU_VERSION_BASE := A10.5
 CRVS_CODENAME := Stable
 
 # Set all versions

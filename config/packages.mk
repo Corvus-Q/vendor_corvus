@@ -1,6 +1,7 @@
 # Packages
 PRODUCT_PACKAGES += \
     DU-Themes \
+    CorvusWalls \
     LiveWallpapers \
     LiveWallpapersPicker \
     CustomDoze \

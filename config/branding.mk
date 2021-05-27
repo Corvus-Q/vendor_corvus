@@ -1,7 +1,7 @@
 # Set all versions
 DU_BUILD_TYPE ?= Unofficial
-DU_VERSION_BASE := Android
-CRVS_CODENAME := 10
+DU_VERSION_BASE := Android-10
+CRVS_CODENAME := LTS-May
 
 # Set all versions
 BUILD_DATE := $(shell date -u +%d%m%Y)
